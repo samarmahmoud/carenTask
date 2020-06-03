@@ -11,20 +11,20 @@ export default class App extends Component {
     super(props);
    
   }
-  // async componentDidMount() {
-  //   try {
-  //      await AsyncStorage.getItem("sKip").then(val=>{
-  //       if(val !== null){
-  //         NavigationService.replace("Home")
-  //       }
-  //     })
+  async componentDidMount() {
+    try {
+       await AsyncStorage.getItem("sKip").then(val=>{
+        if(val !== null){
+          NavigationService.replace("Home")
+        }
+      })
       
-  //   } catch (error) {
-  //     console.log(error);
+    } catch (error) {
+      console.log(error);
 
-  //     alert('Something is wrong')
-  //   }
-  // }
+      alert('Something is wrong')
+    }
+  }
  
 
   render() {
